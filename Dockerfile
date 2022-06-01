@@ -19,6 +19,7 @@ RUN echo 'source /root/esp-idf/export.sh' >> /root/.bashrc
 
 # adf init
 RUN cd /root && git clone -b v2.4 --recursive https://github.com/espressif/esp-adf.git
+RUN cd /root/esp-adf && git submodule update --init --recursive
 ENV ADF_PATH=/root/esp-adf
 
 # adf end
